@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GitHub Analytics</title>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+</head>
+<body>
+    <h1>Project Metrics</h1>
+    <table id="myTable" class="display">
+        <thead>
+            <tr>
+                <th>Category</th>
+                <th>Usage (%)</th>
+                <th>Trend</th>
+            </tr>
+        </thead>
+    </table>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#myTable').DataTable({
+                ajax: { url: 'data.json', dataSrc: '' },
+                columns: [
+                    { data: 'Category' },
+                    { data: 'Usage' },
+                    { data: 'Trend' }
+                ]
+            });
+        });
+    </script>
+</body>
+</html>
