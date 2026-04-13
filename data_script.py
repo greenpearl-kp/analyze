@@ -4,7 +4,7 @@ import json
 # Create dummy analytics data
 data = {
     'Category': ['Web', 'Mobile', 'Desktop', 'Cloud'],
-    'Usage':,
+    'Usage': ['High', 'Medium', 'Low],
     'Trend': ['Up', 'Stable', 'Down', 'Up']
 }
 
